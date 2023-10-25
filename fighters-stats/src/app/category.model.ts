@@ -8,7 +8,7 @@ export class Category {
   private _champion: Fighter;
 
   constructor(id: number, name: string, min_weight: number,
-              max_weight: number, champion: number) {
+              max_weight: number, champion: Fighter) {
     this._id = id;
     this._name = name;
     this._min_weight = min_weight;
