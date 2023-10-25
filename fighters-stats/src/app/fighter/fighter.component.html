@@ -1,27 +1,31 @@
 <div class="container-fluid">
-  <table class="table table-striped">
-    <thead>
+  <div *ngIf="fightersList">
+    <table class="table table-striped">
+      <thead>
       <tr>
         <th scope="col" class="table-title-id">ID</th>
         <th scope="col">Firstname</th>
         <th scope="col">Lastname</th>
         <th scope="col">Weight</th>
       </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let i of [1, 2, 3]" (click)="setCurrentFighter(fighter)">
-          <th scope="row">{{i}}</th>
-          <td>{{i}}</td>
-          <td>{{i}}</td>
-          <td>{{i}}</td>
-        </tr>
-    </tbody>
-    <tfoot>
+      </thead>
+      <tbody>
+      <tr *ngFor="let fighter of fightersList" (click)="setCurrentFighter(fighter)">
+        <th scope="row">{{fighter._id}}</th>
+        <td>{{fighter._firstName}}</td>
+        <td>{{fighter._name}}</td>
+        <td>{{fighter._weight}}</td>
+      </tr>
+      </tbody>
+      <tfoot>
       <input type="button" class="btn btn-edit">
     </tfoot>
   </table>
-  <app-fighter-details *ngIf="currentFighter" [model]="currentFighter" ]>
-  </app-fighter-details>
+  <app-fighter-details *ngIf="currentFighter" [model]="currentFighter" ></app-fighter-details>
+  </div>
+  <div *ngIf="!fightersList">
+    <p>Chargement ...</p>
+  </div>
 </div>
 
 
