@@ -1,3 +1,23 @@
 <div class="container-fluid">
-  <p>ok</p>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col" class="table-title-id">ID</th>
+        <th scope="col">Firstname</th>
+        <th scope="col">Lastname</th>
+        <th scope="col">Weight</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of [1, 2, 3]">
+          <th scope="row">{{i}}</th>
+          <td>{{i}}</td>
+          <td>{{i}}</td>
+          <td>{{i}}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+      <input type="button" class="btn btn-edit">
+    </tfoot>
+  </table>
 </div>
