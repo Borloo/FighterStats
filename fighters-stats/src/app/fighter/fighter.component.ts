@@ -10,22 +10,22 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 })
 export class FighterComponent implements OnInit{
 
-  fightersList: Array<Fighter>|undefined
-
-  constructor(private fighterService: FighterService) {
-  }
-
-  ngOnInit() {
+  fightersList: Array<Fighter>|undefined;
+  currentFighter: Fighter | null | undefined;
+    ngOnInit() {
     this.fighterService.getAllFighters().subscribe(resFighters => {
       this.fightersList = resFighters
     })
   }
+    constructor(private fighterService: FighterService) {
+    }
 
-    @Input()
-    model: Fighter | null = null;
-    @Output()
-    emitFighter: EventEmitter<Fighter> = new EventEmitter<Fighter>();
-    constructor() {
+
+    setCurrentFighter(fighter: Fighter){
+        this.currentFighter = null;
+        setTimeout(() => {
+          this.currentFighter = fighter;
+        }, 10)
     }
 
 }
