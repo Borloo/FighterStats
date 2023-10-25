@@ -1,3 +1,5 @@
+import {Category} from "../category/category.model";
+
 export class Fighter {
   _id: number;
   _firstName: string;
@@ -9,9 +11,10 @@ export class Fighter {
   _nbWin: number;
   _nbLose: number;
   _sexe: string;
+  _category: Category;
 
 
-  constructor(id: number, firstName: string, name: string, age: number, weight: number, height: number, reach: number, nbWin: number, nbLose: number, sexe: string) {
+  constructor(id: number, firstName: string, name: string, age: number, weight: number, height: number, reach: number, nbWin: number, nbLose: number, sexe: string, category: Category) {
     this._id = id;
     this._firstName = firstName;
     this._name = name;
@@ -22,6 +25,7 @@ export class Fighter {
     this._nbWin = nbWin;
     this._nbLose = nbLose;
     this._sexe = sexe;
+    this._category = category;
   }
 
 }
