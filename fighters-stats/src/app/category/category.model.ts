@@ -1,4 +1,4 @@
-import {Fighter} from './fighter.model';
+import {Fighter} from '../fighter/fighter.model';
 
 export class Category {
   private _id: number;
