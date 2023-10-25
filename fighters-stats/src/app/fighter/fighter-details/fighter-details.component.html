@@ -1,0 +1,43 @@
+<form [formGroup]="fighterForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-6">
+      <label for="first-name">
+        Nom
+      </label>
+      <input class="form-control" id="first-name" type="text" formControlName="firstName">
+    </div>
+    <div class="col-6">
+      <label for="lastName">
+        Prénom
+      </label>
+      <input class="form-control" id="lastName" type="text" formControlName="lastName">
+    </div>
+  </div>
+
+  <div class="form-group mt-3" formGroupName="address">
+    <h2>
+      Adresse
+    </h2>
+    <div class="row">
+      <div class="col-4">
+        <label for="street">
+          Rue
+        </label>
+        <input class="form-control" id="street" type="text" formControlName="street">
+      </div>
+      <div class="col-4">
+        <label for="city">
+          Ville
+        </label>
+        <input class="form-control" id="city" type="text" formControlName="city">
+      </div>
+      <div class="col-4">
+        <label for="zip">
+          Code Postal
+        </label>
+        <input class="form-control" id="zip" type="text" formControlName="zip">
+      </div>
+    </div>
+  </div>
+  <input type="submit" class="btn btn-primary mt-3" value="Valider">
+</form>

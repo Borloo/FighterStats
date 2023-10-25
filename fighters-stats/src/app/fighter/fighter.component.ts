@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Fighter} from "./fighter.model";
 import {FighterService} from "./fighter.service";
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-fighter',
@@ -19,5 +20,12 @@ export class FighterComponent implements OnInit{
       this.fightersList = resFighters
     })
   }
+
+    @Input()
+    model: Fighter | null = null;
+    @Output()
+    emitFighter: EventEmitter<Fighter> = new EventEmitter<Fighter>();
+    constructor() {
+    }
 
 }

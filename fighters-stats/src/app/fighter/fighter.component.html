@@ -19,10 +19,15 @@
       </tbody>
       <tfoot>
       <input type="button" class="btn btn-edit">
-      </tfoot>
-    </table>
+    </tfoot>
+  </table>
+  <app-fighter-details *ngIf="currentFighter" [model]="currentFighter" ]>
+  </app-fighter-details>
   </div>
   <div *ngIf="!fightersList">
     <p>Chargement ...</p>
   </div>
+      </tfoot>
 </div>
+
+
