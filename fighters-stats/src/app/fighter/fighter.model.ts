@@ -11,10 +11,10 @@ export class Fighter {
   _nbWin: number;
   _nbLose: number;
   _sexe: string;
-  _category: Category | null;
+  _category: Category;
 
 
-  constructor(id: number, firstName: string, name: string, age: number, weight: number, height: number, reach: number, nbWin: number, nbLose: number, sexe: string, category: Category | null) {
+  constructor(id: number, firstName: string, name: string, age: number, weight: number, height: number, reach: number, nbWin: number, nbLose: number, sexe: string, category: Category) {
     this._id = id;
     this._firstName = firstName;
     this._name = name;

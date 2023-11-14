@@ -8,7 +8,7 @@ import {FormBuilder, FormGroup} from "@angular/forms";
   templateUrl: './fighter.component.html',
   styleUrls: ['./fighter.component.scss']
 })
-export class FighterComponent implements OnInit{
+export class FighterComponent {
 
   fightersList: Array<Fighter>|undefined;
   currentFighter: Fighter | null | undefined;
