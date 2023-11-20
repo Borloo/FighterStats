@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Fighter} from "../models/fighter";
 
 @Component({
   selector: 'app-fighter',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./fighter.component.scss']
 })
 export class FighterComponent {
+
+  @Input() fighter!: Fighter;
 
 }

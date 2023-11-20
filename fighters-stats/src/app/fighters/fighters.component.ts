@@ -14,6 +14,7 @@ export class FightersComponent implements OnInit, OnDestroy{
   sub!: Subscription;
 
   fighters: Fighter[] = [];
+  fighter!: Fighter;
 
   constructor(private fighterService: FighterService) { }
 
@@ -28,6 +29,10 @@ export class FightersComponent implements OnInit, OnDestroy{
 
   ngOnDestroy(): void {
     this.sub.unsubscribe();
+  }
+
+  setFighter(fighter: Fighter): void{
+    this.fighter = fighter;
   }
 
 }
