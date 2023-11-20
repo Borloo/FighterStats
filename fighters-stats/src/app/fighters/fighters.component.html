@@ -20,6 +20,7 @@
             <th>Number of wins</th>
             <th>Number of loses</th>
             <th>Sexe</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -34,9 +35,17 @@
             <td>{{fighter.nbWin}}</td>
             <td>{{fighter.nbLose}}</td>
             <td>{{fighter.sexe}}</td>
+            <td>
+              <button (click)="setFighter(fighter)" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-fighter">
+                Show
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
+</div>
+<div class="modal fade" id="modal-fighter" tabindex="-1" aria-labelledby="modal-fighter" aria-hidden="true">
+  <app-fighter [fighter]="fighter"></app-fighter>
 </div>

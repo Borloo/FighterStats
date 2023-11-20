@@ -1,3 +1,5 @@
+import {Component, Input} from '@angular/core';
+import {Fighter} from "../models/fighter";
 import {Component, OnInit} from '@angular/core';
 import {Fighter} from "./fighter.model";
 import {FighterService} from "./fighter.service";
@@ -27,5 +29,7 @@ export class FighterComponent {
           this.currentFighter = fighter;
         }, 10)
     }
+
+  @Input() fighter!: Fighter;
 
 }
