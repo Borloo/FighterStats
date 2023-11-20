@@ -1,0 +1,51 @@
+<div class="card">
+  <div class="card-header">
+    <h1>Fighters stats</h1>
+  </div>
+  <div class="card-body">
+    <div class="container content-header">
+      <h3>Fighters</h3>
+    </div>
+    <div class="table-responsive" *ngIf="fighters.length">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+            <th>Weight</th>
+            <th>Height</th>
+            <th>Reach</th>
+            <th>Number of wins</th>
+            <th>Number of loses</th>
+            <th>Sexe</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let fighter of fighters">
+            <td>{{fighter.id}}</td>
+            <td>{{fighter.firstname}}</td>
+            <td>{{fighter.lastname}}</td>
+            <td>{{fighter.age}}</td>
+            <td>{{fighter.weight}}</td>
+            <td>{{fighter.height}}</td>
+            <td>{{fighter.reach}}</td>
+            <td>{{fighter.nbWin}}</td>
+            <td>{{fighter.nbLose}}</td>
+            <td>{{fighter.sexe}}</td>
+            <td>
+              <button (click)="setFighter(fighter)" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-fighter">
+                Show
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal-fighter" tabindex="-1" aria-labelledby="modal-fighter" aria-hidden="true">
+  <app-fighter [fighter]="fighter"></app-fighter>
+</div>

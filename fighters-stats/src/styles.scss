@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.min.css";
 .container-fluid{
   width: 85% !important;
 }
@@ -9,4 +9,7 @@
 :root{
   --color-grey-table-bg: rgb(105,105,105);
   --color-grey-table-value: rgb(211,211,211);
+}
+tr{
+  text-align: center;
 }
