@@ -11,7 +11,7 @@ import {Category} from "../../category/category.model";
 export class FighterDetailsComponent {
 
   @Input()
-  model: Fighter;
+  model: Fighter | undefined | null;
   @Output()
   emitFighter: EventEmitter<Fighter> = new EventEmitter<Fighter>();
 
@@ -34,10 +34,10 @@ export class FighterDetailsComponent {
       this.model = new Fighter(1, '', '', 0, 0, 0, 0, 0, 0, '', null);
     } else {
       // @ts-ignore
-      this.fighterForm.patchValue(this.model);
+      this.fighterForm.patchValue(this.model!);
     }
   }
+
   constructor(private fb: FormBuilder) {
-    this.model = new Fighter(1, '', '', 0, 0, 0, 0, 0, 0, '', null);
   }
 }

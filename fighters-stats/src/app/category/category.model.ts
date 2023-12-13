@@ -16,4 +16,6 @@ export class Category {
     this._champion = champion;
   }
 
+  to
+
 }

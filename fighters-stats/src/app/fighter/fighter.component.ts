@@ -8,24 +8,28 @@ import {FormBuilder, FormGroup} from "@angular/forms";
   templateUrl: './fighter.component.html',
   styleUrls: ['./fighter.component.scss']
 })
-export class FighterComponent implements OnInit{
+export class FighterComponent implements OnInit {
 
-  fightersList: Array<Fighter>|undefined;
+  fightersList: Array<Fighter> | undefined;
   currentFighter: Fighter | null | undefined;
-    ngOnInit() {
+
+  ngOnInit() {
     this.fighterService.getAllFighters().subscribe(resFighters => {
       this.fightersList = resFighters
     })
   }
-    constructor(private fighterService: FighterService) {
-    }
+
+  constructor(private fighterService: FighterService) {
+  }
 
 
-    setCurrentFighter(fighter: Fighter){
-        this.currentFighter = null;
-        setTimeout(() => {
-          this.currentFighter = fighter;
-        }, 10)
-    }
+  setCurrentFighter(fighter: Fighter) {
+    console.log(fighter)
+    this.currentFighter = null;
+    setTimeout(() => {
+      this.currentFighter = fighter;
+      console.log(this.currentFighter)
+    }, 10)
+  }
 
 }
