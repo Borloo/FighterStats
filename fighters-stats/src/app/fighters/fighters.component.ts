@@ -25,6 +25,7 @@ export class FightersComponent implements OnInit, OnDestroy{
       },
       error:err =>this.errorMessage = err
     })
+    console.log("ok")
   }
 
   ngOnDestroy(): void {
