@@ -16,6 +16,8 @@ export class Category {
     this._champion = champion;
   }
 
-  to
+  toString(): string {
+    return this._name;
+  }
 
 }

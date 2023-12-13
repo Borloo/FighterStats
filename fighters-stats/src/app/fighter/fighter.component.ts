@@ -24,11 +24,9 @@ export class FighterComponent implements OnInit {
 
 
   setCurrentFighter(fighter: Fighter) {
-    console.log(fighter)
     this.currentFighter = null;
     setTimeout(() => {
       this.currentFighter = fighter;
-      console.log(this.currentFighter)
     }, 10)
   }
 
